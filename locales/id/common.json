@@ -21,7 +21,7 @@
   "loading": "Memuat",
   "loadingComments": "Memuat komentar…",
   "loadingPreview": "Memuat pratinjau…",
-  "poweredBy": "– diberdayakan oleh <a>giscus</a>",
+  "poweredBy": "",
   "showPreviousReplies": {
     "other": "Tampilkan {{count}} balasan sebelumnya"
   },
