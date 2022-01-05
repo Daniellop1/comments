@@ -31,7 +31,7 @@
   "loading": "Cargando",
   "loadingComments": "Cargando comentarios…",
   "loadingPreview": "Cargando vista previa…",
-  "poweredBy": "– Desarrollado por d Comments",
+  "poweredBy": "",
   "showPreviousReplies": {
     "0": "Mostrar {{count}} respuestas anteriores",
     "one": "Mostrar {{count}} respuesta anteriores",
