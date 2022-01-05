@@ -21,7 +21,7 @@
   "loading": "載入中",
   "loadingComments": "正在載入留言……",
   "loadingPreview": "正在載入預覽……",
-  "poweredBy": "– powered by <a>giscus</a>",
+  "poweredBy": "",
   "showPreviousReplies": {
     "other": "顯示 {{count}} 則更早的回覆"
   },
