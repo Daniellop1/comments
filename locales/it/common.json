@@ -31,7 +31,7 @@
   "loading": "Carico",
   "loadingComments": "Carico commenti…",
   "loadingPreview": "Carico anteprima…",
-  "poweredBy": "– da <a>giscus</a>",
+  "poweredBy": "",
   "showPreviousReplies": {
     "0": "Mostra {{count}} risposte precedenti",
     "one": "Mostra {{count}} risposta precedente",
