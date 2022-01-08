@@ -28,8 +28,6 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
   const contents = readme.split('<!-- configuration -->');
   const [afterConfig] = contents[1].split('<!-- end -->');
 
-  contents[1] = `${afterConfig}\n## ${t('tryItOut')} 👇👇👇\n`;
-
   const token = await getAppAccessToken('giscus/giscus').catch(() => '');
   const [contentBefore, contentAfter] = await Promise.all(
     contents.map((section) => renderMarkdown(section, token, 'giscus/giscus')),
@@ -37,9 +35,9 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 
   const comment: IComment = {
     author: {
-      avatarUrl: 'https://avatars.githubusercontent.com/in/106117',
-      login: 'giscus',
-      url: 'https://github.com/apps/giscus',
+      avatarUrl: 'https://avatars.githubusercontent.com/u/44546966',
+      login: 'daniellop1',
+      url: 'https://github.com/daniellop1',
     },
     authorAssociation: 'APP',
     bodyHTML: contentBefore,
@@ -55,7 +53,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     replies: [],
     replyCount: 0,
     upvoteCount: 0,
-    url: 'https://github.com/giscus/giscus',
+    url: 'https://github.com/daniellop1/comments',
     viewerDidAuthor: false,
     viewerHasUpvoted: false,
     viewerCanUpvote: false,
@@ -135,22 +133,17 @@ export default function Home({
         <div className="w-full my-8 giscus" />
         <Script
           src="/client.js"
-          data-repo="giscus/giscus"
-          data-repo-id="MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM="
-          data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNzk2NTc1"
-          data-mapping="specific"
-          data-term="Welcome to giscus!"
-          data-theme="light"
-          data-reactions-enabled="1"
+          data-repo="daniellop1/comments"
+          data-repo-id="R_kgDOGmDcFQ"
+          category="Comment"
+          data-category-id="DIC_kwDOGmDcFc4CAirK"
+          data-mapping="og:title"
+          ata-reactions-enabled="0"
           data-emit-metadata="0"
+          data-theme="light"
+          crossorigin="anonymous"
           data-lang={locale}
         />
-        <a
-          className="block mx-auto mb-6 w-max"
-          href="https://vercel.com/?utm_source=giscus&utm_campaign=oss"
-        >
-          <img src="/powered-by-vercel.svg" alt="Powered by Vercel" />
-        </a>
       </div>
     </main>
   );
