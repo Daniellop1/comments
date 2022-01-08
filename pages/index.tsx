@@ -123,10 +123,7 @@ export default function Home({
     <main className="w-full min-h-screen gsc-homepage-bg" data-theme={theme}>
       <div className="w-full max-w-3xl p-2 mx-auto color-text-primary">
         <Comment comment={comment}>
-          <Configuration
-            directConfig={directConfig}
-            onDirectConfigChange={handleDirectConfigChange}
-          />
+
           <div className="p-4 pt-0 markdown" dangerouslySetInnerHTML={{ __html: contentAfter }} />
         </Comment>
 
