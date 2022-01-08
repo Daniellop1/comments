@@ -28,9 +28,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
   
 
   const token = await getAppAccessToken('giscus/giscus').catch(() => '');
-  const [contentBefore, contentAfter] = await Promise.all(
-    contents.map((section) => renderMarkdown(section, token, 'giscus/giscus')),
-  );
+  
 
   const comment: IComment = {
     author: {
