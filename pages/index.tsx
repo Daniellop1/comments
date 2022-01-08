@@ -25,10 +25,13 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 
   const path = join(process.cwd(), `README${localeSuffix}.md`);
   const readme = readFileSync(path, 'utf-8');
-  
+  const contents = readme.split('<!-- configuration -->');
+  const [afterConfig] = contents[1].split('<!-- end -->');
 
   const token = await getAppAccessToken('giscus/giscus').catch(() => '');
-  
+  const [contentBefore, contentAfter] = await Promise.all(
+    contents.map((section) => renderMarkdown(section, token, 'giscus/giscus')),
+  );
 
   const comment: IComment = {
     author: {
