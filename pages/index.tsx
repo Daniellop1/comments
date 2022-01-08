@@ -27,9 +27,9 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
   const readme = readFileSync(path, 'utf-8');
   
 
-  const token = await getAppAccessToken('daniellop1/comments').catch(() => '');
+  const token = await getAppAccessToken('giscus/giscus').catch(() => '');
   const [contentBefore, contentAfter] = await Promise.all(
-    contents.map((section) => renderMarkdown(section, token, 'daniellop1/comments')),
+    contents.map((section) => renderMarkdown(section, token, 'giscus/giscus')),
   );
 
   const comment: IComment = {
