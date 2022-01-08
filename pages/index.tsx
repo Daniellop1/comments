@@ -25,6 +25,13 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 
   const path = join(process.cwd(), `README${localeSuffix}.md`);
   const readme = readFileSync(path, 'utf-8');
+  const contents = readme.split('<!-- configuration -->');
+  const [afterConfig] = contents[1].split('<!-- end -->');
+
+  const token = await getAppAccessToken('giscus/giscus').catch(() => '');
+  const [contentBefore, contentAfter] = await Promise.all(
+    contents.map((section) => renderMarkdown(section, token, 'giscus/giscus')),
+  );
 
   const comment: IComment = {
     author: {
@@ -33,6 +40,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
       url: 'https://github.com/daniellop1',
     },
     authorAssociation: 'APP',
+    bodyHTML: contentBefore,
     createdAt: '2021-05-15T13:21:14Z',
     deletedAt: null,
     id: 'onboarding',
