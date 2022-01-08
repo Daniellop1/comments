@@ -12,10 +12,10 @@ import { ThemeContext } from '../lib/context';
 import { useTheme } from '../lib/hooks';
 
 const meta = {
-  title: 'giscus',
+  title: 'D-Comments',
   description: 'A comments widget built on GitHub Discussions.',
   image:
-    'https://opengraph.githubassets.com/4f866d5b634e7cd5422af77f8dbfb6d48dd288b7c5c18326544c1973210320ed/giscus/giscus',
+    'https://avatars.githubusercontent.com/u/44546966',
 };
 
 export default function App({ Component, pageProps }: AppProps) {
