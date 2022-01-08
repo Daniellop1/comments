@@ -135,7 +135,6 @@ export default function Home({
           src="/client.js"
           data-repo="daniellop1/comments"
           data-repo-id="R_kgDOGmDcFQ"
-          category="Comment"
           data-category-id="DIC_kwDOGmDcFc4CAirK"
           data-mapping="og:title"
           ata-reactions-enabled="0"
