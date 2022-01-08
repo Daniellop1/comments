@@ -33,7 +33,6 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
       url: 'https://github.com/daniellop1',
     },
     authorAssociation: 'APP',
-    bodyHTML: contentBefore,
     createdAt: '2021-05-15T13:21:14Z',
     deletedAt: null,
     id: 'onboarding',
