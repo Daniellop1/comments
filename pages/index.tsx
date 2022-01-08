@@ -140,7 +140,6 @@ export default function Home({
           ata-reactions-enabled="0"
           data-emit-metadata="0"
           data-theme="light"
-          crossorigin="anonymous"
           data-lang={locale}
         />
       </div>
